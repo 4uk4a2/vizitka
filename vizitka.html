@@ -209,7 +209,7 @@
         <div class="idtext">
           <h1 class="name" data-i18n="name">Antonin Todorov</h1>
           <div class="roles">
-            <span data-i18n="role1">AI Solutions</span><span class="dot">&#9670;</span><span data-i18n="role2">Office Automation</span>
+            <span data-i18n="roleVibe">Vibe Coding</span><span class="dot">&#9670;</span><span data-i18n="role1">AI Solutions</span><span class="dot">&#9670;</span><span data-i18n="role2">Office Automation</span>
           </div>
         </div>
       </div>
@@ -278,11 +278,11 @@
 
 <script>
   var I18N = {
-    en:{name:"Antonin Todorov",role1:"AI Solutions",role2:"Office Automation",msgBtn:"Message me",saveBtn:"Save contact",
+    en:{name:"Antonin Todorov",roleVibe:"Vibe Coding",role1:"AI Solutions",role2:"Office Automation",msgBtn:"Message me",saveBtn:"Save contact",
         qrHint:"Scan to open the card",copyTitle:"Copy",copied:"Copied!",saved:"Contact downloaded!",ctaHref:"https://wa.me/359878729844"},
-    bg:{name:"Антонин Тодоров",role1:"AI решения",role2:"Офис автоматизация",msgBtn:"Пиши ми",saveBtn:"Запази контакта",
+    bg:{name:"Антонин Тодоров",roleVibe:"Вайб кодинг",role1:"AI решения",role2:"Офис автоматизация",msgBtn:"Пиши ми",saveBtn:"Запази контакта",
         qrHint:"Сканирай за визитката",copyTitle:"Копирай",copied:"Копирано!",saved:"Контактът е свален!",ctaHref:"viber://chat?number=%2B359878729844"},
-    ru:{name:"Антонин Тодоров",role1:"ИИ-решения",role2:"Офисная автоматизация",msgBtn:"Написать мне",saveBtn:"Сохранить контакт",
+    ru:{name:"Антонин Тодоров",roleVibe:"Вайб-кодинг",role1:"ИИ-решения",role2:"Офисная автоматизация",msgBtn:"Написать мне",saveBtn:"Сохранить контакт",
         qrHint:"Сканируй, чтобы открыть",copyTitle:"Копировать",copied:"Скопировано!",saved:"Контакт скачан!",ctaHref:"https://t.me/oXNguOh"}
   };
   var curLang = "en";
@@ -317,7 +317,7 @@
   document.getElementById("copyEmail").addEventListener("click", function(){ doCopy("vpc@abv.bg"); });
   function legacyCopy(x){ var ta=document.createElement("textarea"); ta.value=x; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");}catch(e){} document.body.removeChild(ta); }
 
-  var VCARD=["BEGIN:VCARD","VERSION:3.0","N:Тодоров;Антонин;;;","FN:Антонин Тодоров","ORG:Vitosha Photo Center Ltd.","TITLE:AI Solutions / Office Automation","TEL;TYPE=CELL:+359878729844","EMAIL:vpc@abv.bg","URL:https://t.me/oXNguOh","END:VCARD",""].join("\r\n");
+  var VCARD=["BEGIN:VCARD","VERSION:3.0","N:Тодоров;Антонин;;;","FN:Антонин Тодоров","ORG:Vitosha Photo Center Ltd.","TITLE:Vibe Coding / AI Solutions / Office Automation","TEL;TYPE=CELL:+359878729844","EMAIL:vpc@abv.bg","URL:https://t.me/oXNguOh","END:VCARD",""].join("\r\n");
   document.getElementById("saveContact").addEventListener("click", function(){
     var blob=new Blob([VCARD],{type:"text/vcard;charset=utf-8"}); var url=URL.createObjectURL(blob);
     var a=document.createElement("a"); a.href=url; a.download="Antonin_Todorov.vcf"; document.body.appendChild(a); a.click(); document.body.removeChild(a);
